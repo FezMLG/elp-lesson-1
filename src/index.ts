@@ -7,12 +7,12 @@ export class TurboNumber {
     this.num = num;
   }
 
-  subtract(x: number) {
+  subtract(x: number): TurboNumber {
     this.num = this.num - x;
     return this;
   }
 
-  divide(x: number) {
+  divide(x: number): TurboNumber {
     if (x == 0) {
       throw new Error(DIVIDE_BY_ZERO_ERROR);
     }
@@ -20,7 +20,7 @@ export class TurboNumber {
     return this;
   }
 
-  result() {
+  result(): number {
     return this.num;
   }
 }
