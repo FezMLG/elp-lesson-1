@@ -6,13 +6,15 @@ export class TurboNumber {
     this.num = num;
   }
 
-  substract(x: number) {
+  substract(x: number): TurboNumber {
     this.num = this.num - x;
+    return this;
   }
 
-  divide(x: number) {
+  divide(x: number): TurboNumber {
     if (x === 0) throw new Error(ERROR_DIVIDE_ZERO);
     this.num = this.num / x;
+    return this;
   }
 
   result(): number {

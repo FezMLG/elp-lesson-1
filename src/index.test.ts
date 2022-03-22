@@ -32,4 +32,10 @@ describe("number", function () {
     const numL1 = 0;
     expect(() => tn.divide(numL1)).toThrow(ERROR_DIVIDE_ZERO);
   });
+
+  it("should allow chaining", () => {
+    expect(new TurboNumber(num0).divide(num1).substract(num2).result()).toBe(
+      num0 / num1 - num2
+    );
+  });
 });
