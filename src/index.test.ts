@@ -1,3 +1,4 @@
+import { ERROR_DIVIDING_BY_ZERO } from "./consts";
 import { TurboNumber } from "./index";
 
 describe("number", function () {
@@ -23,5 +24,9 @@ describe("number", function () {
     tn.divide(num1);
     tn.substract(num2);
     expect(tn.result()).toBe(num0 / num1 - num2);
+  });
+
+  it("should not allow dividing by 0", () => {
+    expect(() => tn.divide(0)).toThrowError(ERROR_DIVIDING_BY_ZERO);
   });
 });
