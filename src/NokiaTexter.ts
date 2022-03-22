@@ -11,7 +11,7 @@ export class NokiaTexter {
     let retString = "";
     const text = this.text;
     text.replace(/\s+/g, " ").trim();
-    if (text.length > 160) {
+    if (text.replace(/\s+/g, "").length > 160) {
       throw new Error(TOO_LONG);
     }
     let ret = text.split(" ");
