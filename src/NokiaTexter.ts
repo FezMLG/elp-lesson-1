@@ -10,7 +10,7 @@ export class NokiaTexter {
   squeeze() {
     let retString = "";
     const text = this.text;
-    if (!text.includes(" ")) {
+    if (!text.trim().includes(" ")) {
       return text;
     }
     if (text.replace(/\s+/g, "").length > 160) {
@@ -27,3 +27,18 @@ export class NokiaTexter {
     return retString;
   }
 }
+
+// export class NokiaTexter {
+//   constructor(private readonly text: string) {}
+
+//   squeeze() {
+//     if (!this.text.trim().includes(" ")) return this.text;
+//     const result = this.text
+//       .split(" ")
+//       .filter((part) => part !== "")
+//       .map((part, index) => (index % 2 === 0 ? part.toUpperCase() : part))
+//       .join("");
+//     if (result.length > 160) throw new Error(TOO_LONG);
+//     return result;
+//   }
+// }
