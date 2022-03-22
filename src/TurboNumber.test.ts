@@ -1,5 +1,5 @@
 import { ERROR_DIVIDE_BY_ZERO } from "./consts";
-import { TurboNumber } from "./index";
+import { TurboNumber } from "./TurboNumber";
 
 describe("number", function () {
   const num0 = 124;
