@@ -31,4 +31,10 @@ describe("number", function () {
       tn.divide(0);
     }).toThrowError(ERROR_DIVIDE_BY_ZERO);
   });
+
+  it("should allow chaining", () => {
+    expect(new TurboNumber(num0).subtract(num1).divide(num2).result()).toBe(
+      num0 / num1 - num2
+    );
+  });
 });
