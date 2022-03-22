@@ -18,13 +18,12 @@ export class NokiaTexter {
     }
     text.replace(/\s+/g, " ").trim();
     let ret = text.split(" ");
-    for (let i = 0; i < ret.length; i++) {
-      let temp = ret[i];
-      if (i % 2 == 0) {
-        temp = temp.toUpperCase();
+    ret.map((word, key) => {
+      if (key % 2 == 0) {
+        word = word.toUpperCase();
       }
-      retString += temp;
-    }
+      retString += word;
+    });
     return retString;
   }
 }
