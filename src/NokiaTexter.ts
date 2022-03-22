@@ -9,17 +9,11 @@ export class NokiaTexter {
 
   squeeze() {
     let retString = "";
-<<<<<<< HEAD
     const text = this.text;
     if (!text.trim().includes(" ")) {
       return text;
     }
     if (text.replace(/\s+/g, "").length > 160) {
-=======
-    let text = this.text;
-    text.replace(/\s+/g, " ").trim();
-    if (text.length > 160) {
->>>>>>> parent of 5bd8ce6 (changing let to const)
       throw new Error(TOO_LONG);
     }
     text.replace(/\s+/g, " ").trim();
