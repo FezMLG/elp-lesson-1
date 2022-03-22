@@ -9,14 +9,14 @@ export class NokiaTexter {
 
   squeeze() {
     let retString = "";
-    const text = this.text.trim();
+    let text = this.text.trim();
     if (!text.includes(" ")) {
       return text;
     }
     if (text.replace(/\s+/g, "").length > 160) {
       throw new Error(TOO_LONG);
     }
-    text.replace(/\s+/g, " ").trim();
+    text = text.replace(/\s+/g, " ").trim();
     let ret = text.split(" ");
     ret.map((word, key) => {
       if (key % 2 == 0) {
