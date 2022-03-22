@@ -10,10 +10,10 @@ export class NokiaTexter {
   squeeze() {
     let retString = "";
     const text = this.text;
-    text.replace(/\s+/g, " ").trim();
     if (text.replace(/\s+/g, "").length > 160) {
       throw new Error(TOO_LONG);
     }
+    text.replace(/\s+/g, " ").trim();
     let ret = text.split(" ");
     if (ret.length <= 1) {
       return text;
