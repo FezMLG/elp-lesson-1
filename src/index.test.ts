@@ -43,7 +43,7 @@ describe("number", function () {
     expect(() => tn.divide(num2)).toThrow(DIVIDE_BY_ZERO_ERROR);
   });
 
-  it("possible to run function from function", () => {
+  it("chaining is working", () => {
     const num1 = 5;
     const num2 = -3;
     const num3 = -4;
