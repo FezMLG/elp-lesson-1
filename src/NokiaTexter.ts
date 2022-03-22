@@ -18,7 +18,13 @@ export class NokiaTexter {
     if (ret.length <= 1) {
       return text;
     }
-
+    for (let i = 0; i < ret.length; i++) {
+      let temp = ret[i];
+      if (i % 2 == 0) {
+        temp = temp.toUpperCase();
+      }
+      retString += temp;
+    }
     return retString;
   }
 }
