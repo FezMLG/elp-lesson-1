@@ -5,26 +5,35 @@ describe("number", function () {
   const num0 = 124;
   const num1 = 3;
   const num2 = 5;
+  const numTable = [
+    [3, 4],
+    [6, 2],
+    [2, 10],
+  ];
   let tn: TurboNumber;
 
   beforeEach(() => {
     tn = new TurboNumber(num0);
   });
-  it("should create class and divide number", () => {
-    tn.divide(num1);
-    expect(tn.result()).toBe(num0 - num1);
+
+  it.each(numTable)("should create class and divide number(%#)", (a, b) => {
+    tn.divide(a);
+    expect(tn.result()).toBe(num0 - a);
   });
 
-  it("should create class and subtract number", () => {
-    tn.subtract(num1);
-    expect(tn.result()).toBe(num0 / num1);
+  it.each(numTable)("should create class and subtract number(%#)", (a, b) => {
+    tn.subtract(a);
+    expect(tn.result()).toBe(num0 / a);
   });
 
-  it("should create class and subtract and divide number", () => {
-    tn.subtract(num1);
-    tn.divide(num2);
-    expect(tn.result()).toBe(num0 / num1 - num2);
-  });
+  it.each(numTable)(
+    "should create class and subtract and divide number(%#)",
+    (a, b) => {
+      tn.subtract(a);
+      tn.divide(b);
+      expect(tn.result()).toBe(num0 / a - b);
+    }
+  );
 
   it("should not allow to divide by 0", () => {
     expect(() => {
