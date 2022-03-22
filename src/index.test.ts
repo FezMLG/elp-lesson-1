@@ -1,3 +1,4 @@
+import { ERROR_DIVIDE_ZERO } from "./consts";
 import { TurboNumber } from "./index";
 
 describe("number", function () {
@@ -25,5 +26,12 @@ describe("number", function () {
     tn.substract(num1);
     tn.divide(num2);
     expect(tn.result()).toBe((num0 - num1) / num2);
+  });
+
+  it("should throw an error when dividing by 0", () => {
+    const num0 = 10;
+    const num1 = 0;
+    const tn = new TurboNumber(num0);
+    expect(() => tn.divide(num1)).toThrow(ERROR_DIVIDE_ZERO);
   });
 });

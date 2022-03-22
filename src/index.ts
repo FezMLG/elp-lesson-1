@@ -1,3 +1,5 @@
+import { ERROR_DIVIDE_ZERO } from "./consts";
+
 export class TurboNumber {
   num: number;
   constructor(num: number) {
@@ -9,6 +11,7 @@ export class TurboNumber {
   }
 
   divide(x: number) {
+    if (x === 0) throw new Error(ERROR_DIVIDE_ZERO);
     this.num = this.num / x;
   }
 
