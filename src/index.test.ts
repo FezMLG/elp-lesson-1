@@ -45,6 +45,6 @@ describe("number", function () {
     const num1 = 5;
     const num2 = -3;
     const num3 = -4;
-    expect(tn.subtract(num0).divide(num2).result()).toBe(num3);
+    expect(tn.subtract(num1).divide(num2).result()).toBe(num3);
   });
 });
