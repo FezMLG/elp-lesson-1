@@ -26,11 +26,22 @@ describe(NokiaTexter.name, () => {
     expect(example.squeeze()).toBe("NIEczekajZkolacja.");
   });
 
-  it("should return 'ZrobZakupyIWyrzucSmieci' when 'ZrobZakupyIWyrzucSmieci' is given", () => {
+  it("should return 'ZrobZakupyIWyrzucSmieci' when 'ZrobZakupyIWyrzucSmieci' or 'ZrobZakupyIWyrzucSmieci ' is given", () => {
     //when
-    const example = new NokiaTexter("ZrobZakupyIWyrzucSmieci");
+    let example = new NokiaTexter("ZrobZakupyIWyrzucSmieci");
     //then
     expect(example.squeeze()).toBe("ZrobZakupyIWyrzucSmieci");
+    //when
+    example = new NokiaTexter("ZrobZakupyIWyrzucSmieci ");
+    //then
+    expect(example.squeeze()).toBe("ZrobZakupyIWyrzucSmieci");
+  });
+
+  it("should return 'NIEczekajZkolacja.' when 'Nie  czekaj z kolacja. ' is given", () => {
+    //when
+    const example = new NokiaTexter("Nie  czekaj z kolacja. ");
+    //then
+    expect(example.squeeze()).toBe("NIEczekajZkolacja.");
   });
 
   it("should throw error 'MessageTooLong' if shortened string is longer than 160 chars", () => {
