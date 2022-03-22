@@ -17,6 +17,7 @@ export class TurboNumber {
       throw new Error(DIVIDE_BY_ZERO_ERROR);
     }
     this.num = this.num / x;
+    return this;
   }
 
   result() {

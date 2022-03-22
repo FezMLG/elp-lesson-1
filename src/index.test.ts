@@ -52,8 +52,6 @@ describe("number", function () {
     const num2 = -3;
     const num3 = -4;
     const a = new TurboNumber(num0);
-    expect(a.subtract(num1).divide(num2).result(num3)).toBe(
-      (num1 - num2) / num3
-    );
+    expect(a.subtract(num1).divide(num2).result()).toBe(num3);
   });
 });
