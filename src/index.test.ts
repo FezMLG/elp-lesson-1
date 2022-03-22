@@ -4,9 +4,11 @@ import { TurboNumber } from "./index";
 describe("number", function () {
   let tn: TurboNumber;
   const num0 = 17;
+
   beforeEach(() => {
     tn = new TurboNumber(num0);
   });
+
   it("subtracts 2 numbers", () => {
     const num2 = 5;
     tn.subtract(num2);
