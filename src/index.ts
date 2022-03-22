@@ -8,12 +8,13 @@ export class TurboNumber {
 
   substract(x: number) {
     this.num = this.num - x;
+    return this;
   }
 
   divide(x: number) {
     if (x == 0) throw new Error(ERROR_DIVIDING_BY_ZERO);
-
     this.num = this.num / x;
+    return this;
   }
 
   result(): number {

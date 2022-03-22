@@ -29,4 +29,10 @@ describe("number", function () {
   it("should not allow dividing by 0", () => {
     expect(() => tn.divide(0)).toThrowError(ERROR_DIVIDING_BY_ZERO);
   });
+
+  it("should allow chaining", () => {
+    expect(new TurboNumber(num0).divide(num1).substract(num2).result()).toBe(
+      num0 / num1 - num2
+    );
+  });
 });
