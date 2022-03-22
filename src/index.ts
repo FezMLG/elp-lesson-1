@@ -8,6 +8,10 @@ export class TurboNumber {
     this.num = this.num - x;
   }
 
+  divide(x: number) {
+    this.num = this.num / x;
+  }
+
   result(): number {
     return this.num;
   }
