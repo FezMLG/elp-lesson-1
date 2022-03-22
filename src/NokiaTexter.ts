@@ -9,8 +9,8 @@ export class NokiaTexter {
 
   squeeze() {
     let retString = "";
-    const text = this.text;
-    if (!text.trim().includes(" ")) {
+    const text = this.text.trim();
+    if (!text.includes(" ")) {
       return text;
     }
     if (text.replace(/\s+/g, "").length > 160) {

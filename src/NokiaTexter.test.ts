@@ -32,9 +32,9 @@ describe(NokiaTexter.name, () => {
     //then
     expect(example.squeeze()).toBe("ZrobZakupyIWyrzucSmieci");
     //when
-    example = new NokiaTexter("ZrobZakupyIWyrzucSmieci ");
+    let example2 = new NokiaTexter("ZrobZakupyIWyrzucSmieci ");
     //then
-    expect(example.squeeze()).toBe("ZrobZakupyIWyrzucSmieci");
+    expect(example2.squeeze()).toBe("ZrobZakupyIWyrzucSmieci");
   });
 
   it("should return 'NIEczekajZkolacja.' when 'Nie  czekaj z kolacja. ' is given", () => {
