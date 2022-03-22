@@ -1,7 +1,8 @@
 {
   "scripts": {
     "test": "jest",
-    "run": "ts-node src/index.ts"
+    "run": "ts-node src/index.ts",
+    "test:watch": "jest --watch"
   },
   "engines": {
     "node": ">=16.14.0"
