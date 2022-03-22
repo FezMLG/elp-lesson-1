@@ -45,4 +45,15 @@ describe("number", function () {
     const a = new TurboNumber(num1);
     expect(() => a.divide(num2)).toThrow(DIVIDE_BY_ZERO_ERROR);
   });
+
+  it("possible to run function from function", () => {
+    const num0 = 17;
+    const num1 = 5;
+    const num2 = -3;
+    const num3 = -4;
+    const a = new TurboNumber(num0);
+    expect(a.subtract(num1).divide(num2).result(num3)).toBe(
+      (num1 - num2) / num3
+    );
+  });
 });
