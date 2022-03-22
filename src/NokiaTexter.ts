@@ -10,14 +10,14 @@ export class NokiaTexter {
   squeeze() {
     let retString = "";
     const text = this.text;
+    if (!text.includes(" ")) {
+      return text;
+    }
     if (text.replace(/\s+/g, "").length > 160) {
       throw new Error(TOO_LONG);
     }
     text.replace(/\s+/g, " ").trim();
     let ret = text.split(" ");
-    if (ret.length <= 1) {
-      return text;
-    }
     for (let i = 0; i < ret.length; i++) {
       let temp = ret[i];
       if (i % 2 == 0) {
