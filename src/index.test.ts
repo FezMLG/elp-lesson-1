@@ -1,5 +1,5 @@
 import { DIVIDE_BY_ZERO_ERROR } from "./consts";
-import { number, TurboNumber } from "./index";
+import { TurboNumber } from "./index";
 
 describe("number", function () {
   it("subtracts 2 numbers", () => {
