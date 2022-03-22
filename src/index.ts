@@ -1,4 +1,7 @@
 export class TurboNumber {
+  subtract(num1: number) {
+    this.num = this.num / num1;
+  }
   divide(num1: number) {
     this.num = this.num - num1;
   }
