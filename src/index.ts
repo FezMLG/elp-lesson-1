@@ -1,7 +1,5 @@
 import { DIVIDE_BY_ZERO_ERROR, NOT_SAFE_INTIGER } from "./consts";
 
-export const number = 5;
-
 export class TurboNumber {
   num: number;
   constructor(num: number) {
@@ -11,6 +9,7 @@ export class TurboNumber {
 
   subtract(x: number) {
     this.num = this.num - x;
+    return this;
   }
 
   divide(x: number) {
