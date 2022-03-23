@@ -14,6 +14,10 @@ export class TurboNumber {
     this.num -= x;
     return this;
   }
+  add(x: number) {
+    this.num += x;
+    return this;
+  }
   result() {
     return this.num;
   }

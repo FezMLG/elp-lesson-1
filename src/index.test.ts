@@ -27,4 +27,8 @@ describe("number", function () {
   it("should allow chaining", () => {
     expect(tn.subtract(num1).divide(num2).result()).toBe((num0 - num1) / num2);
   });
+
+  it("should add numbers", () => {
+    expect(tn.add(num1).result()).toBe(num0 + num1);
+  });
 });
