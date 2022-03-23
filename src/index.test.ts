@@ -9,10 +9,10 @@ describe("number", function () {
     expect(tn.result()).toBe(10 / 5);
   });
 
-  it("corretly substract numbers", () => {
+  it("corretly subtract numbers", () => {
     const tn = new TurboNumber(10);
 
-    tn.substract(5);
+    tn.subtract(5);
 
     expect(tn.result()).toBe(10 - 5);
   });
