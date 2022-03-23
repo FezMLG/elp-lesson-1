@@ -7,10 +7,12 @@ export class TurboNumber {
   divide(x: number) {
     if (x == 0) throw new Error(ZERO_ERROR);
     this.num = this.num / x;
+    return this;
   }
 
   subtract(x: number) {
     this.num = this.num - x;
+    return this;
   }
   result() {
     return this.num;

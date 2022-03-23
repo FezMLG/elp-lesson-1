@@ -25,4 +25,10 @@ describe("number", function () {
 
     expect(() => tn.divide(0)).toThrow(ZERO_ERROR);
   });
+
+  it("should allow chaining", () => {
+    const tn = new TurboNumber(num0);
+
+    expect(tn.subtract(num1).divide(num2).result()).toBe((num0 - num1) / num2);
+  });
 });
