@@ -1,4 +1,4 @@
-import { TurboNumber } from "./index";
+import { TurboNumber, ZERO_ERROR } from "./index";
 
 describe("number", function () {
   const num0 = 20;
@@ -18,5 +18,11 @@ describe("number", function () {
     tn.subtract(num1);
 
     expect(tn.result()).toBe(num0 - num1);
+  });
+
+  it("corretly throws errow when try to divide by 0.", () => {
+    const tn = new TurboNumber(num0);
+
+    expect(() => tn.divide(0)).toThrow(ZERO_ERROR);
   });
 });
