@@ -1,4 +1,4 @@
-import { TurboNumber, ZERO_ERROR } from "./index";
+import { TurboNumber, ZERO_ERROR, ZERO_ERROR_2 } from "./index";
 
 describe("number", function () {
   const num0 = 20;
@@ -37,5 +37,10 @@ describe("number", function () {
 
   it("should sqrt", () => {
     expect(tn.sqrt().result()).toBe(Math.sqrt(num0));
+  });
+
+  it("corretly throws errow when try to sqrtnumber lower than 0.", () => {
+    tn = new TurboNumber(-1);
+    expect(() => tn.sqrt()).toThrow(ZERO_ERROR_2);
   });
 });

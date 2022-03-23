@@ -1,4 +1,6 @@
 export const ZERO_ERROR = "Cannot divide by 0.";
+export const ZERO_ERROR_2 = "Cannot sqrt number lower than 0.";
+
 export class TurboNumber {
   constructor(private num: number) {
     this.num = num;
@@ -24,6 +26,7 @@ export class TurboNumber {
     return this;
   }
   sqrt() {
+    if (this.num < 0) throw new Error(ZERO_ERROR_2);
     this.num = Math.sqrt(this.num);
     return this;
   }
