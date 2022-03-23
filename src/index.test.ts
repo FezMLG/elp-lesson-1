@@ -34,4 +34,8 @@ describe("number", function () {
   it("should correctly return power of the number", () => {
     expect(tn.power(num1).result()).toBe(Math.pow(num0, num1));
   });
+
+  it("should sqrt", () => {
+    expect(tn.sqrt().result()).toBe(Math.sqrt(num0));
+  });
 });

@@ -23,6 +23,10 @@ export class TurboNumber {
     this.num = Math.pow(this.num, pow);
     return this;
   }
+  sqrt() {
+    this.num = Math.sqrt(this.num);
+    return this;
+  }
   result() {
     return this.num;
   }
