@@ -11,7 +11,7 @@ export class TurboNumber {
   }
 
   subtract(x: number) {
-    this.num = this.num - x;
+    this.num -= x;
     return this;
   }
   result() {
