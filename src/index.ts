@@ -6,6 +6,10 @@ export class TurboNumber {
   divide(x: number) {
     this.num = this.num / x;
   }
+
+  subtract(x: number) {
+    this.num = this.num - x;
+  }
   result() {
     return this.num;
   }
