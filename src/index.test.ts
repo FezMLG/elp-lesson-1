@@ -31,4 +31,7 @@ describe("number", function () {
   it("should add numbers", () => {
     expect(tn.add(num1).result()).toBe(num0 + num1);
   });
+  it("should correctly return power of the number", () => {
+    expect(tn.power(num1).result()).toBe(Math.pow(num0, num1));
+  });
 });

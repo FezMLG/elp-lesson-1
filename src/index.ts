@@ -18,6 +18,11 @@ export class TurboNumber {
     this.num += x;
     return this;
   }
+
+  power(pow: number) {
+    this.num = Math.pow(this.num, pow);
+    return this;
+  }
   result() {
     return this.num;
   }
